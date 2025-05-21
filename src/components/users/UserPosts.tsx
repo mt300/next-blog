@@ -4,7 +4,7 @@ import { Post } from '@/types/index';
 export default function UserPosts({ posts }: { posts: Post[] }) {
   return (
     <section>
-      <h2 className="text-lg font-semibold text-gray-700 mb-4">Posts do usuário</h2>
+      <h2 className="text-lg font-semibold text-gray-700 mb-4">Posts deste autor</h2>
       <ul className="space-y-4">
         {posts.map(post => (
           <li key={post.id} className="border rounded-lg p-4 hover:shadow transition">
