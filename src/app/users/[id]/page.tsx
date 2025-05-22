@@ -2,10 +2,12 @@ import { notFound } from 'next/navigation';
 import UserDetails from '@/components/users/UserDetails';
 import UserPosts from '@/components/users/UserPosts';
 import { getUser, getUserPosts } from '@/lib/api';
+import { PageProps } from '../../../../.next/types/app/layout';
 
-export default async function UserPage({ params }: { params: { id: string } }) {
-  const user = await getUser(params.id);
-  const posts = await getUserPosts(params.id);
+export default async function UserPage({ params }: PageProps) {
+  const { id } = await params;
+  const user = await getUser(id);
+  const posts = await getUserPosts(id);
 
   if (!user) return notFound();
 

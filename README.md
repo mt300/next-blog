@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 📝 Next Blog
 
-First, run the development server:
+Um blog moderno desenvolvido com Next.js, TypeScript e Tailwind CSS, utilizando geração estática (SSG) para oferecer desempenho otimizado e excelente experiência ao usuário.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Tecnologias Utilizadas
+
+- [Next.js](https://nextjs.org/) – Framework React para produção
+- [TypeScript](https://www.typescriptlang.org/) – Tipagem estática para JavaScript
+- [Tailwind CSS](https://tailwindcss.com/) – Framework CSS utilitário
+- [ESLint](https://eslint.org/) – Ferramenta de linting
+- [Next Font](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) – Otimização de fontes com a fonte Geist
+
+## 🧠 Justificativas Técnicas
+
+### 📦 Geração Estática (SSG)
+
+Optou-se pela geração estática para pré-renderizar as páginas do blog durante o build, resultando em:
+
+- **Desempenho superior**: Páginas carregam rapidamente, pois são servidas como arquivos HTML estáticos.
+- **Melhor SEO**: Conteúdo pré-renderizado é mais facilmente indexado por mecanismos de busca.
+- **Redução de carga no servidor**: Como as páginas são geradas antecipadamente, há menos processamento no tempo de requisição.
+
+### 🧱 Estrutura do Projeto
+
+A estrutura do projeto foi organizada para promover escalabilidade e manutenção facilitada:
+
+```
+next-blog/
+├── public/             # Arquivos públicos (imagens, favicon, etc.)
+├── src/
+│   ├── components/     # Componentes reutilizáveis
+│   ├── app/          # Páginas do Next.js
+│   ├── lib/         # Arquivos de requisições HTTP
+│   └── types/          # Funções utilitárias
+├── .eslintrc.json      # Configuração do ESLint
+├── next.config.js      # Configuração do Next.js
+├── tailwind.config.js  # Configuração do Tailwind CSS
+├── tsconfig.json       # Configuração do TypeScript
+└── package.json        # Dependências e scripts do projeto
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Passos para Rodar o Projeto Localmente
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Clone o Repositório
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/mt300/next-blog.git
+cd next-blog
+```
 
-## Learn More
+### 2. Instale as Dependências
 
-To learn more about Next.js, take a look at the following resources:
+Utilize o gerenciador de pacotes de sua preferência:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Com npm
+npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Ou com yarn
+yarn install
 
-## Deploy on Vercel
+# Ou com pnpm
+pnpm install
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 3. Inicie o Servidor de Desenvolvimento
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+# Com npm
+npm run dev
+
+# Ou com yarn
+yarn dev
+
+# Ou com pnpm
+pnpm dev
+```
+
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para visualizar o projeto em execução.
+
+## 📌 Observações Relevantes
+
+- **Fonte Geist**: O projeto utiliza a fonte Geist, otimizada com o `next/font`, garantindo carregamento eficiente e melhor desempenho.
+- **Tailwind CSS**: A estilização é feita com Tailwind CSS, permitindo um desenvolvimento ágil e responsivo.
+- **Linting e Formatação**: Configurações de ESLint estão incluídas para manter a consistência e qualidade do código.
+- **Deploy**: O projeto está pronto para ser implantado em plataformas como [Vercel](https://vercel.com/), facilitando o processo de publicação.
